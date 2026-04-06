@@ -2,7 +2,7 @@
 <html lang="en">
 <head>
     <meta charset="UTF-8">
-    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0, maximum-scale=1.0, user-scalable=no">
     <title>Banana Tennis Runner</title>
     <style>
         * { margin: 0; padding: 0; box-sizing: border-box; }
@@ -19,9 +19,13 @@
             position: relative;
             width: 900px;
             height: 500px;
+            max-width: 100vw;
+            max-height: 56vw;
         }
         canvas {
             display: block;
+            width: 100%;
+            height: 100%;
             border-radius: 12px;
             box-shadow: 0 0 40px rgba(255, 215, 0, 0.3);
         }
@@ -114,12 +118,13 @@
                 <div class="subtitle">Run, jump & smash your way to victory!</div>
                 <button class="btn" id="startBtn">Play</button>
                 <div class="controls-hint">SPACE / UP to jump &bull; DOWN to slide &bull; SPACE (in air) to racket smash</div>
+                <div class="controls-hint">Mobile: Tap top to jump &bull; Tap bottom to slide &bull; Tap again in air to smash</div>
             </div>
             <div id="gameOverScreen">
                 <div class="title">Game Over!</div>
                 <div id="finalScore">0</div>
                 <button class="btn" id="restartBtn">Play Again</button>
-                <div class="controls-hint">Press SPACE to restart</div>
+                <div class="controls-hint">Press SPACE or tap to restart</div>
             </div>
         </div>
     </div>

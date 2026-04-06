@@ -650,7 +650,7 @@ canvas.addEventListener('touchstart', e => {
     if (gameState === 'playing') {
         const touch = e.touches[0];
         const rect = canvas.getBoundingClientRect();
-        const ty = touch.clientY - rect.top;
+        const ty = (touch.clientY - rect.top) / rect.height * H;
         if (ty > H * 0.6) {
             // Lower area = slide
             if (!player.jumping && !player.sliding) {
